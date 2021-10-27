@@ -1,0 +1,25 @@
+{
+  "id": "6a4c340f-d127-4e80-b8c4-c7ea8c40888a",
+  "name": "Demo - Branching by Abstraction",
+  "publisher": "Vjeko.com",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://vjeko.com/",  "runtime": "8.0"
+}
