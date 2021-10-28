@@ -19,7 +19,7 @@ page 50102 "CICD Book Card"
                     trigger OnValidate()
                     var
                         BookLookupController: Codeunit "CICD Book Lookup Controller";
-                        BookLookup: Codeunit "CICD Book Lookup";
+                        BookLookup: Codeunit "CICD Book Lookup v2";
                         Book: Codeunit "CICD Book";
                         Token: JsonToken;
                         Author: Record "CICD Author";
