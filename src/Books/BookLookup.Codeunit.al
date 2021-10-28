@@ -1,4 +1,4 @@
-codeunit 50100 "CICD Book Lookup"
+codeunit 50100 "CICD Book Lookup" implements "CICD IBookLookup"
 {
     local procedure GetURL(ISBN: Code[13]): Text
     begin
