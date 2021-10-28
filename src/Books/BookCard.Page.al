@@ -18,12 +18,13 @@ page 50102 "CICD Book Card"
 
                     trigger OnValidate()
                     var
+                        BookLookupController: Codeunit "CICD Book Lookup Controller";
                         BookLookup: Codeunit "CICD Book Lookup";
                         Book: Codeunit "CICD Book";
                         Token: JsonToken;
                         Author: Record "CICD Author";
                     begin
-                        if BookLookup.LookupByISBN(Rec.ISBN, Book) then begin
+                        if BookLookupController.LookupByISBN(Rec.ISBN, BookLookup, Book) then begin
                             Author.GetAuthorByName(Book.Author());
                             Rec.Validate("Author Code", Author.Code);
                             Rec.Validate(Title, Book.Title());
