@@ -16,6 +16,7 @@ page 50101 "CICD Book List"
             {
                 field(ISBN; Rec.ISBN)
                 {
+                    ToolTip = 'Specifies ISNB number of the book.';
                     ApplicationArea = All;
                 }
 
@@ -26,6 +27,7 @@ page 50101 "CICD Book List"
 
                 field("Author Name"; Rec."Author Name")
                 {
+                    ToolTip = 'Specifies name of the author of the book.';
                     ApplicationArea = All;
                 }
             }
