@@ -23,9 +23,13 @@ page 50102 "CICD Book Card"
                         Book: Codeunit "CICD Book";
                         Token: JsonToken;
                         Author: Record "CICD Author";
+                        AuthorName: Text;
                     begin
+                        Author.Init();
                         if BookLookupController.LookupByISBN(Rec.ISBN, BookLookup, Book) then begin
-                            Author.GetAuthorByName(Book.Author());
+                            AuthorName := Book.Author();
+                            // TODO do something more with author name
+                            Author.GetAuthorByName(AuthorName);
                             Rec.Validate("Author Code", Author.Code);
                             Rec.Validate(Title, Book.Title());
                         end;
