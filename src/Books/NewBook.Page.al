@@ -15,12 +15,13 @@ page 50104 "CICD New Book"
 
                 trigger OnValidate()
                 var
+                    BookLookupController: Codeunit "CICD Book Lookup Controller";
                     BookLookup: Codeunit "CICD Book Lookup";
                     Token: JsonToken;
                     Author: Record "CICD Author";
                 begin
                     Clear(Book);
-                    OKEnabled := BookLookup.LookupByISBN(ISBN, Book);
+                    OKEnabled := BookLookupController.LookupByISBN(ISBN, BookLookup, Book);
 
                     if OKEnabled then
                         CurrPage.Cover.Page.ShowCover(ISBN)
