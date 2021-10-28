@@ -41,6 +41,15 @@ table 50101 "CICD Book"
         {
             Caption = 'Title';
         }
+
+        field(6; "Item Description"; Text[100])
+        {
+            Caption = 'Item Description';
+            FieldClass = FlowField;
+            Editable = false;
+            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+        }
+
     }
 
     local procedure ValidateISBN();
