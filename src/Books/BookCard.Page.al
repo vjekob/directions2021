@@ -36,6 +36,10 @@ page 50102 "CICD Book Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Item Description"; Rec."Item Description")
+                {
+                    ApplicationArea = All;
+                }
             }
 
             group(Details)
